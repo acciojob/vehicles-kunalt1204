@@ -1,25 +1,35 @@
 package com.driver;
 
-public class Boat implements WaterVehicle{
+public class Boat implements WaterVehicle {
+    // Private fields for encapsulation
+    private String vehicleName;
+    private int vehicleCapacity;
 
-    public String VehicleName;
-    public int VehicleCapacity;
-
-    public void VehicleName(String VehicleName){
-        this.VehicleName = VehicleName;
+    // Constructor to initialize the boat's properties
+    public Boat(String vehicleName, int vehicleCapacity) {
+        this.vehicleName = vehicleName;
+        this.vehicleCapacity = vehicleCapacity;
     }
 
-    public void VehicleCapacity(int VehicleCapacity){
-        this.VehicleCapacity = VehicleCapacity;
+    // Setter for vehicle name
+    public void setVehicleName(String vehicleName) {
+        this.vehicleName = vehicleName;
     }
 
-    public String getVehicleName(){
-        return this.VehicleName;
+    // Setter for vehicle capacity
+    public void setVehicleCapacity(int vehicleCapacity) {
+        this.vehicleCapacity = vehicleCapacity;
     }
 
-    public int getVehicleCapacity(){
-        return this.VehicleCapacity;
+    // Implementation of getVehicleName from WaterVehicle interface
+    @Override
+    public String getVehicleName() {
+        return this.vehicleName;
     }
 
-
+    // Implementation of getVehicleCapacity from WaterVehicle interface
+    @Override
+    public int getVehicleCapacity() {
+        return this.vehicleCapacity;
+    }
 }
