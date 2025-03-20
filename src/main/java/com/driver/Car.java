@@ -50,4 +50,12 @@ public class Car extends Vehicle {
        return this.currentGear;
     }
 
+    public String getType(){
+        return this.type;
+    }
+
+    public int getSeats(){
+        return this.seats;
+    }
+
 }
